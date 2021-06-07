@@ -166,7 +166,7 @@ def heapify(data, n, i, drawData, timeTick):
         heapify(data, n, largest, drawData, timeTick)
 
 
-def heapSort(data, drawData, timeTick):
+def heap_sort(data, drawData, timeTick):
     global colordata
 
     colordata = ['#3b4249' for x in range(len(data))]

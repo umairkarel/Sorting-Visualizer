@@ -62,21 +62,8 @@ def startAlgorithm():
 	startB['state'] = 'disabled'	
 	genB['state'] = 'disabled'
 
-	algorithm = algMenu.get()
-	if algorithm == 'Bubble Sort':
-		bubble_sort(data, drawData, speedScale.get())
-	elif algorithm == 'Insertion Sort':
-		insertion_sort(data, drawData, speedScale.get())
-	elif algorithm == 'Selection Sort':
-		selection_sort(data, drawData, speedScale.get())
-	elif algorithm == 'Merge Sort':
-		temp = data
-		merge_sort(data, drawData, speedScale.get())
-	elif algorithm == 'Quick Sort':
-		temp = data
-		quick_sort(data, drawData, speedScale.get())
-	elif algorithm == 'Heap Sort':
-		heapSort(data, drawData, speedScale.get())
+	algorithm = ('_').join(algMenu.get().lower().split())
+	eval(algorithm + '(data, drawData, speedScale.get())')
         
 	# Enabling the Button again
 	startB['state'] = 'normal'	
