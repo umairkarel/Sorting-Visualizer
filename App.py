@@ -39,12 +39,12 @@ def drawData(data, colorArray):
 def generate():
 	global data
 
-	minVal = int(minEntry.get())
-	maxVal = int(maxEntry.get())
+	# minVal = int(minEntry.get())
+	# maxVal = int(maxEntry.get())
 	size = int(sizeEntry.get())
 
 	data = [i for i in range(1,size)]
-	# data = [random.randint(minVal, maxVal) for i in range(1,size)]
+	# data = [random.randint(minVal, maxVal) for i in range(1,size)] # For generating data in given range
 	random.shuffle(data)
 
 	# Normalizing data
@@ -75,6 +75,9 @@ def startAlgorithm():
 	elif algorithm == 'Quick Sort':
 		temp = data
 		quick_sort(data, drawData, speedScale.get())
+	elif algorithm == 'Heap Sort':
+		heapSort(data, drawData, speedScale.get())
+        
 	# Enabling the Button again
 	startB['state'] = 'normal'	
 	genB['state'] = 'normal'
@@ -90,7 +93,7 @@ UI_Frame.place(relx=0.5, rely=0, relwidth=0.96, relheight=0.3, anchor='n')
 Label(UI_Frame, text='Algorithm', bg='grey', font=('Courier', 20)).place(x=0, y=0)
 
 # Algorithm Selection Dropdown
-algMenu = ttk.Combobox(UI_Frame, textvariable=selected_algo, values=['Bubble Sort', 'Insertion Sort', 'Selection Sort', 'Merge Sort', 'Quick Sort'], font=('Courier', 15))
+algMenu = ttk.Combobox(UI_Frame, textvariable=selected_algo, values=['Bubble Sort', 'Insertion Sort', 'Selection Sort', 'Merge Sort', 'Quick Sort', 'Heap Sort'], font=('Courier', 15))
 algMenu.place(x=50, y=35, relheight=0.2, relwidth=0.4)
 algMenu.current(0)
 
