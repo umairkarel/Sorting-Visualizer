@@ -10,13 +10,17 @@ A simple responsive app for beginners to understand how <b>sorting algorithms<b>
 * Python 3
 * Tkinter
 
+<br>
+
 # Design/GUI for the App
 ![img1](https://user-images.githubusercontent.com/76861978/108810198-9ea20e00-75d0-11eb-8fae-2c713155c16f.jpg)
 
+<br>
 
 ## Generating Data
 ![img2](https://user-images.githubusercontent.com/76861978/108810210-a5308580-75d0-11eb-8419-03ad5595d4f7.jpg)
 
+<br>
 
 ## Visualization Of Algorithm 
 Example here **Merge Sort**.
