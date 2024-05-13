@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sorting-visualizer"
+version = "0.1.0"
+description = ""
+authors = ["umairkarel <umair.karel@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "sorting_visualizer"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
